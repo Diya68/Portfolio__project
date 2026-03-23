@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sparkles, Zap, Network } from 'lucide-react';
 import profilePhoto from '../assets/profile-photo.jpg';
-
+import { getStatus } from '../lib/api';
 const LandingPage = () => {
   const navigate = useNavigate();
   const [particles, setParticles] = useState([]);
+  const [data, setData] = useState([]);
 
-  useEffect(() => {
-    // Generate random particles for neural network effect
+ useEffect(() => {
     const newParticles = Array.from({ length: 30 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
@@ -17,8 +17,16 @@ const LandingPage = () => {
       delay: Math.random() * 5,
       duration: Math.random() * 10 + 10
     }));
+
     setParticles(newParticles);
   }, []);
+
+  useEffect(() => {
+  getStatus().then((res) => {
+    console.log("Backend Data:", res);
+    setData(res);
+  });
+}, []);
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-[#0a0a0f] via-[#0f1116] to-[#0a0a0f] overflow-hidden">
