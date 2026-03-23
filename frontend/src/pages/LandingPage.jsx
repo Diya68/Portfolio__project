@@ -6,7 +6,6 @@ import { getStatus } from '../lib/api';
 const LandingPage = () => {
   const navigate = useNavigate();
   const [particles, setParticles] = useState([]);
-  const [data, setData] = useState([]);
 
  useEffect(() => {
     const newParticles = Array.from({ length: 30 }, (_, i) => ({
