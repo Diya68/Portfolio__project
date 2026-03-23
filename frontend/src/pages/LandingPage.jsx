@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Sparkles, Zap, Network } from 'lucide-react';
-import profilePhoto from '../assets/profile-photo.jpg';
+import { useNavigate } from "react-router-dom";
+import { Sparkles, Zap, Network } from "lucide-react";
+import profilePhoto from "../assets/profile-photo.jpg";
 import { getStatus } from '../lib/api';
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -19,13 +19,6 @@ const LandingPage = () => {
 
     setParticles(newParticles);
   }, []);
-
-  useEffect(() => {
-  getStatus().then((res) => {
-    console.log("Backend Data:", res);
-    setData(res);
-  });
-}, []);
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-[#0a0a0f] via-[#0f1116] to-[#0a0a0f] overflow-hidden">
