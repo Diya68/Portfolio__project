@@ -9,7 +9,7 @@ const Projects = () => {
       
         title: 'EyeClick: Hands-Free Computer Control Using Eye Tracking',
         description: 'A computer vision-based system that enables hands-free mouse control using eye movements and blinks, built with MediaPipe, OpenCV, and Python for real-time interaction.',
-        image: 'https://www.google.com/imgres?q=eye%20scanning%20image&imgurl=https%3A%2F%2Frecfaces.com%2Fwp-content%2Fuploads%2F2020%2F12%2Fsnimok-ekrana-2020-12-03-150858-830x500.png&imgrefurl=https%3A%2F%2Frecfaces.com%2Farticles%2Firis-scanner&docid=7K7_PvZJK_fPLM&tbnid=FSePmx3k5pJgyM&vet=12ahUKEwjcrZzxmY6UAxUXUWwGHVJaGRsQnPAOegQIFxAB..i&w=830&h=500&hcb=2&ved=2ahUKEwjcrZzxmY6UAxUXUWwGHVJaGRsQnPAOegQIFxAB',
+        image: 'https://recfaces.com/wp-content/uploads/2020/12/snimok-ekrana-2020-12-03-150858-830x500.png',
         tags: ['Computer Vision', 'OpenCV', 'MediaPipe', 'Python', 'Eye Tracking'],
         github: 'https://github.com/Diya68/Eye_Click',
         year: '2026'
